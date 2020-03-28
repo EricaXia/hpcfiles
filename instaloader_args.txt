@@ -1,0 +1,20 @@
+Login emails (passwords all same):
+---
+jadeite.stream@gmail.com
+sunwisdom101@gmail.com
+cutebarfkitten@gmail.com
+musketeers1128@gmail.com
+
+
+
+Example commands:
+
+In terminal:
+---
+instaloader --login="musketeers1128@gmail.com" --password="EvOu7CR7Iq2V" --no-videos --geotags --comments --no-compress-json --post-filter="date_utc <= datetime(2020, 2, 29)" --count=15000 --request-timeout=180 "#instafood"
+
+
+
+Within bash script, on WSL Ubuntu looping through array of hashtags ("x" as var name):
+---
+instaloader --login="sunwisdom101@gmail.com" --password="EvOu7CR7Iq2V" --fast-update --no-videos --geotags --comments --no-compress-json --post-filter="datetime(2019, 11, 1) <= date_utc <= datetime(2020, 2, 29)" --count=1000 --request-timeout=180 $x
