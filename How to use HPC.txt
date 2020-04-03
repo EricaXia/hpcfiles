@@ -1,0 +1,22 @@
+How to use HPC
+---
+1. Open Putty
+
+2. Load profile 'hpc' (Makes sure X11 option checked)
+
+2.5: My USC login: 
+ericaxia
+bulbamander6B58A71KZB
+(also need to do SMS text msg auth)
+
+3. Go to my main folder by typing: 
+cd /home/rcf-proj3/aa6/ericaxia
+
+4. View quota `myquota`
+
+---
+
+How to run Instaloader
+
+1. `cd /home/rcf-proj3/aa6/ericaxia/hpcfiles/instaloader-4.3`
+2. Run `python3 instaloader.py [options]`

@@ -1,0 +1,38 @@
+COVID-19 PROJECT -
+SCRAPE BY LOCATION:
+-----
+
+cd /home/rcf-proj3/aa6/ericaxia
+
+
+**Need to specify python version before running anything**:
+source /usr/usc/python/3.7.4/setup.sh
+
+
+Example of one single command scraping by loc id, save to specific data directory:
+
+python3 /home/rcf-proj3/aa6/ericaxia/instaloader-4.3/instaloader.py --login="sunwisdom101@gmail.com" --password="EvOu7CR7Iq2V" --no-videos --geotags --comments --no-compress-json --post-filter="datetime(2020, 3, 1) <= date_utc <= datetime(2020, 3, 26)" --count=5000 --request-timeout=180 --dirname-pattern={CHANGETODIRECTORYOFDATA} {%INSERTLOCIDHERE}
+
+On bash script, to read in loc ids from tsv .txt file:
+---
+Test by echoing the elements of the file:
+```
+OIFS=$IFS;
+IFS="\t";
+
+locs=`cat location_data.txt`
+locsArray=$locs;
+
+for id in $locsArray
+do
+    echo $id
+done
+
+IFS=$OIFS;
+```
+
+(if "id" is the for-loop's var name):
+```
+python3 /home/rcf-proj3/aa6/ericaxia/instaloader-4.3/instaloader.py --login="sunwisdom101@gmail.com" --password="EvOu7CR7Iq2V" --no-videos --geotags --comments --no-compress-json --post-filter="datetime(2020, 3, 1) <= date_utc <= datetime(2020, 3, 26)" --count=5000 --request-timeout=180 $id
+```
+

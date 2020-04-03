@@ -1,0 +1,17 @@
+Slurm commands
+
+To run Slurm interactively in terminal (for testing purposes only):
+salloc --ntasks=1 --time=1:00:00
+salloc --ntasks=1 --time=06:00:00
+
+
+
+
+To check current jobs:
+squeue -u ericaxia
+scontrol show job <jobid>
+sstat -j <jobid>
+
+
+To make a batch script to run:
+
