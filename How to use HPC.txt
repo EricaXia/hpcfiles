@@ -12,7 +12,7 @@ bulbamander6B58A71KZB
 3. Go to my main folder by typing: 
 cd /home/rcf-proj3/aa6/ericaxia
 
-4. View quota `myquota`
+4. View quota by typing `myquota`
 
 ---
 
