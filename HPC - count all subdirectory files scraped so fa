@@ -1,0 +1,20 @@
+# HPC - count all subdirectory files scraped so far
+
+find . -name "*_UTC.json" | wc -l
+
+## go into every subdirectory, count how many "*_UTC.json" files in total:
+find -maxdepth 1 -type d | while read -r dir; do printf "%s:\t" "$dir"; find "$dir" -name "*_UTC.json" -type f | wc -l; done
+
+# count files in total:
+find -maxdepth 1 -type d | while read -r dir; do printf "%s:\t" "$dir"; find "$dir" -type f | wc -l; done
+
+
+Part 1. finds all directories in current folder
+2. Begin while loop ("while" the list of directories is continuing to be sent, do this..)
+3. Print each directory name followed by tab
+4. Make a list of all files in curr subdir
+5. Counts number of lines in that list
+
+
+Running count, 4/4/20:
+~12920 files in all directories on HPC drive
