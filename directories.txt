@@ -20,11 +20,3 @@
 %85723
 %949026064
 %958179
-file_counts.sh
-location_1.sh
-location_data_2.txt
-location_data_new.txt
-location_dl.sh
-location_newacc.sh
-loc_data
-nonfood_il_script.sh
